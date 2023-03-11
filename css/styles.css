@@ -13,9 +13,21 @@
   --buttons-2page: #e7e9fc;
   --primary-text-color: #434455;
 }
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
 /* списки и точки */
 ul {
   list-style: none;
+  padding-left: 0;
+  margin: 0;
 }
 a {
   text-decoration: none;
@@ -27,8 +39,31 @@ body {
   background-color: var(--background);
   letter-spacing: 0.02em;
 }
-/* header */
+img {
+  display: block;
+}
 
+.container {
+  width: 1158px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto 0 auto;
+}
+/* header */
+.header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--accent-color);
+}
+.header-nav {
+  display: flex;
+  gap: 40px;
+}
+.header-logo-nav {
+  display: flex;
+  align-items: center;
+  margin-right: 76px;
+}
 .header-logo {
   font-family: "Raleway", sans-serif;
   color: var(--accent-color);
@@ -37,6 +72,7 @@ body {
   line-height: 1.17;
   text-transform: uppercase;
   letter-spacing: 0.03em;
+  margin-right: 76px;
 }
 .logo-color {
   color: var(--brand-color);
@@ -49,7 +85,21 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
+.header-address {
+  display: flex;
+  gap: 40px;
+}
 
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo-nav {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
 address {
   font-style: normal;
 }
@@ -67,6 +117,10 @@ address {
   color: var(--hover-color);
 }
 /* hero */
+.hero-container {
+  padding-top: 188px;
+  padding-bottom: 188px;
+}
 .hero {
   background-color: var(--brand-color);
 }
@@ -76,8 +130,11 @@ address {
   font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
-  text-align: center;
   letter-spacing: 0.02em;
+  max-width: 496px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 48px;
 }
 .btn-hero {
   color: var(--hero-title-buttons);
@@ -89,6 +146,14 @@ address {
   align-items: center;
   letter-spacing: 0.04em;
   cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 16px 32px;
+  gap: 10px;
+  border: 0px solid transparent;
 }
 
 .active-btn:hover,
@@ -99,6 +164,11 @@ address {
 
 /* specifics */
 
+.specifics-container {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
 .mini-title {
   color: var(--mini-titles-color);
   font-weight: 500;
@@ -106,7 +176,10 @@ address {
   line-height: 1.2;
   letter-spacing: 0.02em;
 }
-
+.specifics-list {
+  display: flex;
+  gap: 30px;
+}
 .specifics-text,
 .text-dsc {
   font-weight: 400;
@@ -117,6 +190,13 @@ address {
 }
 
 /* what are you doing */
+.doing-container {
+  padding-bottom: 120px;
+}
+.doing-img-list {
+  display: flex;
+  gap: 24px;
+}
 .primary-title {
   color: var(--primary-titles-color);
   font-weight: 700;
@@ -125,14 +205,49 @@ address {
   letter-spacing: 0.02em;
   text-align: center;
   text-transform: capitalize;
+  padding-bottom: 72px;
 }
 
 /* team secondary-title, img  -dsc */
+.container-btn {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding-top: 108px;
+  padding-bottom: 72px;
+}
+.team-container {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.box-content {
+  padding: 32px;
+  padding-left: 16px;
+  text-align: center;
+}
+.team-item {
+  background-color: var(--background);
+  flex-basis: calc((100% - 3 * 24px) / 4);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
+}
 
 .team {
   background-color: var(--cloud);
 }
 
+.team-list {
+  display: flex;
+  gap: 24px;
+}
+
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px 24px;
+  padding-bottom: 120px;
+}
 .secondary-title {
   color: var(--secondary-titles-color);
   font-weight: 500;
@@ -158,6 +273,24 @@ address {
   align-items: center;
   text-align: center;
   letter-spacing: 0.04em;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 12px 24px;
+  min-width: 69px;
+  height: 48px;
+  border: 0px solid transparent;
+}
+.card-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px 16px;
+  gap: 8px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .secondary-title-cards {
@@ -180,11 +313,16 @@ address {
 
 .basement {
   background-color: var(--brand-color);
+  padding-top: 101.5px;
+  padding-bottom: 100px;
 }
 .basement-text {
   color: var(--buttons-2page);
   font-size: 16px;
   line-height: 1.5;
+  display: flex;
+  max-width: 264px;
+  padding-top: 16px;
 }
 .basement-logo {
   font-family: "Raleway", sans-serif;
