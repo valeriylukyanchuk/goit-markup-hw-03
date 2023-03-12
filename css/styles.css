@@ -222,6 +222,7 @@ address {
 }
 .buttons-for-nav {
   padding-top: 96px;
+  padding-bottom: 120px;
 }
 
 .box-content {
@@ -252,7 +253,6 @@ address {
   display: flex;
   flex-wrap: wrap;
   gap: 48px 24px;
-  padding-bottom: 120px;
 }
 .secondary-title {
   color: var(--secondary-titles-color);
