@@ -42,7 +42,7 @@ body {
 img {
   display: block;
 }
-
+/* контейнер */
 .container {
   width: 1158px;
   padding-left: 15px;
@@ -53,7 +53,7 @@ img {
 .header {
   padding-top: 24px;
   padding-bottom: 24px;
-  border-bottom: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--buttons-2page);
 }
 .header-nav {
   display: flex;
@@ -117,12 +117,12 @@ address {
   color: var(--hover-color);
 }
 /* hero */
-.hero-container {
-  padding-top: 188px;
-  padding-bottom: 188px;
-}
+
 .hero {
   background-color: var(--brand-color);
+  padding-top: 188px;
+  padding-bottom: 188px;
+  text-align: center;
 }
 
 .hero-title {
@@ -143,17 +143,14 @@ address {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
-  align-items: center;
   letter-spacing: 0.04em;
   cursor: pointer;
   display: block;
   margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
   padding: 16px 32px;
-  gap: 10px;
   border: 0px solid transparent;
+  border-radius: 4px;
+  min-width: 169px;
 }
 
 .active-btn:hover,
@@ -164,7 +161,7 @@ address {
 
 /* specifics */
 
-.specifics-container {
+.specifics {
   padding-top: 120px;
   padding-bottom: 120px;
 }
@@ -175,10 +172,11 @@ address {
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
+  margin-bottom: 8px;
 }
 .specifics-list {
   display: flex;
-  gap: 30px;
+  gap: 24px;
 }
 .specifics-text,
 .text-dsc {
@@ -188,14 +186,21 @@ address {
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
 }
+.about-item {
+  flex-basis: calc((100% - 3 * 24px) / 4);
+}
 
 /* what are you doing */
-.doing-container {
+.doing {
   padding-bottom: 120px;
 }
 .doing-img-list {
   display: flex;
   gap: 24px;
+}
+
+.doing-item {
+  flex-basis: calc((100% - 3 * 24px) / 4);
 }
 .primary-title {
   color: var(--primary-titles-color);
@@ -205,7 +210,7 @@ address {
   letter-spacing: 0.02em;
   text-align: center;
   text-transform: capitalize;
-  padding-bottom: 72px;
+  margin-bottom: 72px;
 }
 
 /* team secondary-title, img  -dsc */
@@ -214,15 +219,12 @@ address {
   justify-content: center;
   gap: 24px;
   padding-top: 108px;
-  padding-bottom: 72px;
+  margin-bottom: 72px;
 }
-.team-container {
-  padding-top: 120px;
-  padding-bottom: 120px;
-}
+
 .box-content {
-  padding: 32px;
-  padding-left: 16px;
+  padding: 32px 16px;
+
   text-align: center;
 }
 .team-item {
@@ -235,6 +237,8 @@ address {
 
 .team {
   background-color: var(--cloud);
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .team-list {
@@ -262,6 +266,7 @@ address {
 }
 
 /* second page */
+
 .second-nav {
   font-family: "Roboto", sans-serif;
   color: var(--accent-color);
@@ -273,22 +278,24 @@ address {
   align-items: center;
   text-align: center;
   letter-spacing: 0.04em;
-  box-sizing: border-box;
   display: flex;
   flex-direction: row;
   justify-content: center;
   padding: 12px 24px;
   min-width: 69px;
-  height: 48px;
   border: 0px solid transparent;
+  border-radius: 4px;
 }
+.team-items {
+  background-color: var(--background);
+  flex-basis: calc((100% - 3 * 24px) / 4);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
 .card-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
   padding: 0px 16px;
-  gap: 8px;
+  margin-bottom: 8px;
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -313,16 +320,15 @@ address {
 
 .basement {
   background-color: var(--brand-color);
-  padding-top: 101.5px;
+  padding-top: 100px;
   padding-bottom: 100px;
 }
 .basement-text {
   color: var(--buttons-2page);
   font-size: 16px;
   line-height: 1.5;
-  display: flex;
   max-width: 264px;
-  padding-top: 16px;
+  margin-top: 16px;
 }
 .basement-logo {
   font-family: "Raleway", sans-serif;
@@ -335,4 +341,17 @@ address {
 }
 .basement-second-logo {
   color: var(--cloud);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
