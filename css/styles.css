@@ -218,8 +218,10 @@ address {
   display: flex;
   justify-content: center;
   gap: 24px;
-  padding-top: 108px;
   margin-bottom: 72px;
+}
+.buttons-for-nav {
+  padding-top: 96px;
 }
 
 .box-content {
@@ -286,6 +288,7 @@ address {
   border: 0px solid transparent;
   border-radius: 4px;
 }
+
 .team-items {
   background-color: var(--background);
   flex-basis: calc((100% - 3 * 24px) / 4);
